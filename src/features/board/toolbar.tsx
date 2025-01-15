@@ -1,6 +1,13 @@
 import React from 'react'
 import { ToggleGroup, ToggleGroupItem } from '../../components/ui/toggle-group'
-import { Circle, Hand, MousePointer, Pencil, Square } from 'lucide-react'
+import {
+  Circle,
+  Eraser,
+  Hand,
+  MousePointer,
+  Pencil,
+  Square,
+} from 'lucide-react'
 import { type ActionType, useToolbarStore } from '~/stores/toolbar-store'
 
 const MemoizedToolbarItem = ({
@@ -59,6 +66,11 @@ const items: Item[] = [
     icon: <Pencil className="h-4 w-4 text-white" />,
     label: 'Draw',
   },
+  {
+    action: 'erase',
+    icon: <Eraser className="h-4 w-4 text-white" />,
+    label: 'Erase',
+  },
 ]
 
 export const Toolbar = () => {
@@ -72,7 +84,7 @@ export const Toolbar = () => {
 
   return (
     <ToggleGroup
-      className="absolute left-0 right-0 top-4 m-auto w-[200px] rounded-md bg-[#31303b]"
+      className="absolute left-0 right-0 top-4 m-auto w-[240px] rounded-md bg-[#31303b]"
       type="single"
       value={toolbarAction}
     >

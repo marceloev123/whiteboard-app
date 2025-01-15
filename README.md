@@ -1,29 +1,52 @@
-# Create T3 App
+# Collaborative Drawing Canvas
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This project is a collaborative drawing canvas built using **Socket.io**, **Next.js**, **Zustand**, and a custom drawing tool. It enables multiple users to draw on the same canvas in real-time, making it ideal for collaborative work, design, or fun interactive activities.
 
-## What's next? How do I make an app with this?
+## Features
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+- **Real-time Collaboration**: Multiple users can draw simultaneously on the same canvas.
+- **Custom Drawing Tool**: Allows users to draw freehand or with predefined tools (e.g., pens, lines, shapes).
+- **Live Updates**: The canvas updates instantly as other users draw, with minimal latency.
+- **Zustand State Management**: Zustand manages the app's state, ensuring smooth updates between the client and server.
+- **Next.js for SSR**: Server-side rendering with Next.js ensures optimal performance and SEO benefits.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Technologies
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+- **Socket.io**: Facilitates real-time communication between the client and the server.
+- **Next.js**: React framework for building the user interface and handling server-side logic.
+- **Zustand**: A small, fast, and scalable state management tool for React.
+- **HTML5 Canvas**: Used for drawing and rendering graphics on the web page.
 
-## Learn More
+## Installation
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+1. Clone the repository:
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+   ```bash
+   git clone git@github.com:marceloev123/whiteboard-app.git
+   cd whiteboard-app
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+   ```
 
-## How do I deploy this?
+2. Install dependencies:
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm install
+```
+
+4. Open your browser and navigate to:
+
+```bash
+http://localhost:3000
+```
+
+5. Demo
+public/
+  assets/
+    videos/
+      demo.mp4

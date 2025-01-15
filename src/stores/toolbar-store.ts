@@ -1,7 +1,13 @@
 import { create } from 'zustand'
 import { persist, createJSONStorage } from 'zustand/middleware'
 
-export type ActionType = 'move' | 'select' | 'square' | 'circle' | 'draw'
+export type ActionType =
+  | 'move'
+  | 'select'
+  | 'square'
+  | 'circle'
+  | 'draw'
+  | 'erase'
 
 interface State {
   toolbarAction: ActionType
