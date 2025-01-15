@@ -46,4 +46,4 @@ http://localhost:3000
 ```
 
 5. Demo
-\public\assets\videos\demo.mp4
+![](/public/assets/videos/demo.mp4)
