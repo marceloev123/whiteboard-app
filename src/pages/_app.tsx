@@ -1,16 +1,26 @@
-import { GeistSans } from "geist/font/sans";
-import { type AppType } from "next/app";
+import { GeistSans } from 'geist/font/sans'
+import { type AppType } from 'next/app'
 
-import { api } from "~/utils/api";
-
-import "~/styles/globals.css";
+import { api } from '~/utils/api'
+import { ThemeProvider as NextThemesProvider } from 'next-themes'
+import '~/styles/globals.css'
+import { SidebarProvider } from '~/components/ui/sidebar'
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <div className={GeistSans.className}>
-      <Component {...pageProps} />
-    </div>
-  );
-};
+    <NextThemesProvider
+      defaultTheme="dark"
+      attribute="class"
+      enableSystem
+      disableTransitionOnChange
+    >
+      <div className={GeistSans.className}>
+        <SidebarProvider>
+          <Component {...pageProps} />
+        </SidebarProvider>
+      </div>
+    </NextThemesProvider>
+  )
+}
 
-export default api.withTRPC(MyApp);
+export default api.withTRPC(MyApp)
